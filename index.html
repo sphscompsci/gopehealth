@@ -1,22 +1,84 @@
+
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="styles.css"/>
         <title>Fental - Home</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
     </head>
 
     <body>
-        <div class="navbar">
-            <h1>Fental</h1>
-        </div>
-        <div class="vid-layer">
-            <div id="bg" style="position: fixed; z-index: -99; width: 100%; height: 100%">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r3fE6FQT82s?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;fullscreen" allowfullscreen>
-                </iframe>       
+
+        <div class="vidbg">
+            <video id="vid" loop="true" muted width: "auto" height: "auto">
+                <source src="alive-short-comp.m4v" type="video/mp4">
+            </video>
+
+            <div class="navbar">
+                <a href="index.html" id="fental">Fental</a>
+            </div>
+            <div class="timeline">
+                <a class="time" id="time" href="timeline.html">Timeline</a>
+            </div>
+            <div class="learn">
+                <a class="learn" id="learn" href="learn.html">Learn</a>
+            </div>
+            <div class="source">
+                <a class="src" id="src" href="#">Sources</a>
+            </div>
+            
+            <div class="prompt" id="prompt">
+                <h1>Enable Sound?</h1>
+                <button class="y-btn" onclick="playAudio()">Yes</button><span style="font-size: 30px;">/</span>
+                <button class="n-btn" onclick="muteAudio()">No</button>
             </div>
         </div>
+
+        <audio id="aud" loop>
+            <source src="mc-music.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var audio = document.getElementById("aud");
+            var video = document.getElementById("vid");
+            var prompt = document.getElementById("prompt");
+            var fental = document.getElementById("fental");
+            var learn = document.getElementById("learn");
+            var source = document.getElementById("src");
+            var time = document.getElementById("time");
+
+            fental.style.display="none";
+            learn.style.display="none";
+            source.style.display="none";
+            time.style.display="none";
+
+            function playAudio(){
+                if(video.paused){
+                    video.play();
+                    audio.play();
+                    prompt.style.display="none";
+                    fental.style.display="block";
+                    learn.style.display="block";
+                    source.style.display="block"
+                    time.style.display="block";
+                }
+            }
+            function muteAudio(){
+                if(video.paused){
+                    fental.style.display="block";
+                    learn.style.display="block";
+                    source.style.display="block";
+                    prompt.style.display="none";
+                    time.style.display="block";
+                    video.play();
+                    audio.muteAudio();
+                    audio.paused()
+                    
+                }
+            }
+        </script>
+
     </body>

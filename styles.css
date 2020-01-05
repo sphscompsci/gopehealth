@@ -1,29 +1,103 @@
-body, html{
-    margin: 0;
-    background: bg;
-    overflow: hidden;
+body{
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;
 }
 
-h1{
-    font-family: 'Pacifico', cursive;
+
+.vidbg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+  }
+  .vidbg video {
+    min-width: 100%; 
+    min-height: 100%; 
+    max-width: screen;
+    max-height: screen;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    zoom: 0.01;
+  }
+
+.prompt{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    width: 50%;
+    height: 200px;
     color: white;
 }
 
-h1:hover{
+button{
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    width: 100px;
+    outline: none;
     cursor: pointer;
-    color: rgb(255, 128, 134);
+}
+
+button:hover{
+    color: tomato
 }
 
 .navbar{
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    overflow: hidden;
-    padding-left: 20px;
+    top: 2%;
+    left: 3%;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 40px;
 }
 
-.vid-layer{
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.671);
+a{
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: tomato;
+}
+
+
+.learn{
+    top: 3%;
+    right: 13%;
+    position: fixed;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px;
+}
+
+
+.src{
+    top: 3%;
+    right: 3%;
+    position: fixed;  
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px; 
+}
+
+.time{
+    top: 3%;
+    right: 21.5%;
+    position: fixed;  
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px; 
 }
