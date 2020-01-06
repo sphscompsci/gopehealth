@@ -1,0 +1,28 @@
+body,html{
+    background: url("memphis-mini-dark.png");
+    text-align: center;
+}
+
+div{
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    font-size: 25px;
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+hr{
+    width: 30%;
+    height: 2px;
+    background-color: white;
+}
+
+.logo-line{
+    width: 45%;
+    height: 2px;
+    background-color: white;
+}
+
+.logo{
+    bottom: 2%;
+}
