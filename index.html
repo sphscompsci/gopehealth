@@ -33,8 +33,14 @@
             <div class="prompt" id="prompt">
                 <h1>Enable Sound?</h1>
                 <button class="y-btn" onclick="playAudio()">Yes</button><span style="font-size: 30px;">/</span>
-                <button class="n-btn" onclick="muteAudio()">No</button>
+                <button class="n-btn" onclick="muteAudio()">No</button><br>
             </div>
+
+            <div class="hotline" id="ht">
+                <a target="blank" href="https://suicidepreventionlifeline.org/">Suicide Prevention Hotline<br>Call 1-800-273-8255</a>
+            </div>
+
+           
         </div>
 
         <audio id="aud" loop>
@@ -49,6 +55,7 @@
             var learn = document.getElementById("learn");
             var source = document.getElementById("src");
             var time = document.getElementById("time");
+            var hotline = document.getElementById("ht");
 
             fental.style.display="none";
             learn.style.display="none";
@@ -60,6 +67,7 @@
                     video.play();
                     audio.play();
                     prompt.style.display="none";
+                    hotline.style.display="none";
                     fental.style.display="block";
                     learn.style.display="block";
                     source.style.display="block"
@@ -73,6 +81,7 @@
                     source.style.display="block";
                     prompt.style.display="none";
                     time.style.display="block";
+                    hotline.style.display="none";
                     video.play();
                     audio.muteAudio();
                     audio.paused()

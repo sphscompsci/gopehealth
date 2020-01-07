@@ -37,13 +37,14 @@ body{
     width: 50%;
     height: 200px;
     color: white;
+    font-size: 25px;
 }
 
 button{
     font-family: 'Lexend Deca', sans-serif;
     background-color: transparent;
     border: none;
-    font-size: 30px;
+    font-size: 35px;
     color: white;
     width: 100px;
     outline: none;
@@ -100,4 +101,23 @@ a:hover{
     position: fixed;  
     font-family: 'Lexend Deca', sans-serif;
     font-size: 25px; 
+}
+
+.hotline{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    position: fixed;
+    text-align: center;
+    width: 50%;
+    height: 200px;
+}
+
+.hotline a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px;
+}
+
+.hotline a:hover{
+    color: rgb(59, 196, 100);
 }
