@@ -1,97 +1,123 @@
 body{
-    background:url("source.gif") no-repeat center center fixed;
     text-align: center;
-    background-size: cover;
-    height: 1000vh;
-}
-
-.card{
-    font-family: 'Lexend Deca', sans-serif;
-    color: white;
-    border: 3px solid rgba(255, 255, 255, 0.50);
-    border-radius: 20px;
-    background-color: rgba(39, 39, 39, 0.45);
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 45%; 
-    display: inline-block;
-    text-align: left;
-    margin: 5px;
-    position: static; 
-    filter: blur(5x);
-    vertical-align: top;
-    cursor: pointer;
-    backdrop-filter: blur(5px);
-}
-
-
-.card:hover{
-    border: 3px solid rgba(255, 255, 255);
-    background-color: rgba(40, 148, 85, 0.5);
-    transition: 0.2s;
-    filter: blur(100x);
-}
-
-.settings{
-    display: none;
-    font-family: 'Lexend Deca', sans-serif;
-    color: white;
-    border: 3px solid rgba(255, 255, 255, 0.50);
-    border-radius: 20px;
-    background-color: rgba(39, 39, 39, 0.45);
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 95%; 
-    overflow: hidden;
-    text-align: left;
-    margin: 5px;
-    position: static; 
-    filter: blur(5x);
-    vertical-align: top;
-    cursor: auto;
-    backdrop-filter: blur(5px);
     margin: 0 auto;
+    background-color: black;
 }
 
-.gear-btn{
-    background-color:rgba(39, 39, 39, 0.45);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    outline: none;
-    border: 3px solid rgb(204, 204, 204);
-    backdrop-filter: blur(5x);
-    cursor: pointer;
-    margin: 10px;
-}
 
-.gear-btn:hover{
-    background-color: rgba(148, 40, 81, 0.5); 
-    border: 3px solid white
-}
+.vidbg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+  }
+  .vidbg video {
+    min-width: 100%; 
+    min-height: 100%; 
+    max-width: screen;
+    max-height: screen;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    zoom: 0.01;
+  }
 
-.gear-btn img{
-    filter: invert(100%);
-}
-
-.settings:hover{
-    border: 3px solid white;    
-}
-
-.sound-setting button{
-    border: none;
+.prompt{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    text-align: center;
     font-family: 'Lexend Deca', sans-serif;
+    width: 50%;
+    height: 200px;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+button{
+    font-family: 'Lexend Deca', sans-serif;
     background-color: transparent;
-    cursor: pointer;
+    border: none;
+    font-size: 35px;
+    color: white;
+    width: 100px;
     outline: none;
+    cursor: pointer;
 }
 
-.sound-setting .on-btn:hover{
-    color: rgb(0, 216, 65);
+button:hover{
+    color: tomato
 }
 
-.sound-setting .off-btn:hover{
-    color: rgb(252, 53, 53);
+.navbar{
+    top: 2%;
+    left: 3%;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 40px;
+}
+
+a{
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: tomato;
+}
+
+
+.learn{
+    top: 3%;
+    right: 13%;
+    position: fixed;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px;
+}
+
+
+.src{
+    top: 3%;
+    right: 3%;
+    position: fixed;  
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px; 
+}
+
+.time{
+    top: 3%;
+    right: 21.5%;
+    position: fixed;  
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px; 
+}
+
+.hotline{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    position: fixed;
+    text-align: center;
+    width: 50%;
+    height: 200px;
+}
+
+.hotline a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px;
+}
+
+.hotline a:hover{
+    color: rgb(59, 196, 100);
 }
