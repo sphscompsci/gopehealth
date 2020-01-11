@@ -8,18 +8,63 @@
         <title>Learn</title>
     </head>
 
-    <body>
+    <body id="background">
 
-        <audio id="aud" loop autoplay playsinline>
+         <audio id="aud1" loop>
             <source src="rain.mp3" type="audio/mp3">
         </audio>
+
+        <div>
+            <button class="gear-btn" onclick="showSetting()" title="Toggle Settings"><img src="gear.png" width="75%"></img></button>
+        </div>
+
+        <div class="settings" id="settings">
+            <h1 class="sound-setting">Rain sound: <button class="on-btn" onclick="playAudio()">On</button> <span>/</span> <button class="off-btn" onclick="muteAudio()">Off</button> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dark Mode:<button class="on-btn" onclick="darkOn()">On</button> <span>/</span> 
+            <button class="off-btn" onclick="darkOff()">Off</button></h1>
+        </div>
+
+        <script>
+            var set = document.getElementById("settings");
+            var audio = document.getElementById("aud1");
+            var bg = document.getElementById("background");
+
+            function showSetting(){
+                if(set.style.display === "none"){
+                    set.style.display = "block";
+                }
+                else{
+                    set.style.display = "none";
+                }
+            }
+
+            function playAudio(){
+                if(audio.paused){
+                    audio.play();
+                }
+            }
+
+            function muteAudio(){
+                audio.pause();
+            }
+
+            function darkOn(){
+                bg.style.backgroundImage="url(black.gif)";
+            }
+            
+            function darkOff(){
+                bg.style.backgroundImage="url(source.gif)"
+            }
+            
+
+        </script>
 
         <div class="card">
             <h1>1. ADHD</h1>
             <p>Attention deficit hyperactivity disorder (ADHD) is a developmental disorder where there are significant problems with attention, hyperactivity or acting impulsively.</p>
             <h2>Treatment</h2>
             <h3>I. Stimulants</h3>
-            <p>These medications act fast and regulate behavior and attention by makking it easier for nerve receptors to communicate with each other. May reduce appetite and slow height growth in children if taken for many years. Beware of misusing these medications, possesing them without a prescription is illegal.</p>
+            <p>These medications act fast and regulate behavior and attention by making it easier for nerve receptors to communicate with each other. May reduce appetite and slow height growth in children if taken for many years. Beware of misusing these medications, possesing them without a prescription is illegal.</p>
             <h3>II. Health Approaches</h3>
             <p>&#8226 Eliminating diet with sugar, added color, flavor and preservatives can improve learning and behavioral problems.</p>
             <p>&#8226 omega-3 (found in salmon, flax seeds, walnuts) supplements can alleviate deficieny of fatty acids associated with ADHD.</p>
@@ -160,7 +205,7 @@
             <p>&#8226 Assertive Community Treatment (ACT): Provides comprehensive treatment for people with serious mental illnesses, such as schizophrenia. Unlike other community-based programs that connect people with mental health or other services, ACT provides highly individualized services directly to people with mental illness. Professionals work with people with schizophrenia and help them meet the challenges of daily life.</p>
             <p>&#8226 Cognitive Enhancement Therapy (CET): Works to promote cognitive functioning and confidence in one’s cognitive ability. CET involves a combination of computer based brain training and group sessions. This is an active area of research in the field at this time.</p>
         </div>
-        <div class="card" style="text-align: center;">
+        <div class="card" style="text-align: center;vertical-align: bottom;">
             <h1>More Information will be added soon...<br>Keep Learning!</h1>
         </div>
 
